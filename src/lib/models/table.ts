@@ -1,6 +1,6 @@
 export interface TableColumnsRecord<TData> {
     title: string;
-    dataIndex: keyof TData;
+    dataIndex: string;
     key: string;
-    render?: (text: keyof TData, record: any, index: any) => any;
+    render?: (text: string, record: any, index: any) => any;
 }

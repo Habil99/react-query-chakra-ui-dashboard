@@ -7,7 +7,7 @@ export interface Citizen {
     date: string | Date;
     address: string;
     status: string;
-    photo: string;
+    [key: string]: number | string | Date;
 }
 
 export type CitizenCreateValues = Omit<Citizen, "id">

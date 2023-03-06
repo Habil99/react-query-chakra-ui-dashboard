@@ -8,7 +8,7 @@ interface CustomFormGroupProps {
     name: string
     label: string
     type?: InputType
-    options? : { value: string, label: string }[]
+    options?: { value: string, label: string }[]
 }
 
 type CitizenCreateValues = Omit<Citizen, "id">
@@ -24,9 +24,22 @@ const CustomFormGroup = ({ name, label, options, type = InputType.text }: Custom
             )}
 
             {type === InputType.select && (
-                <Select {...field} id={name} placeholder={label}>
+                <Select
+                    {...field}
+                    id={name}
+                    placeholder={label}
+                    color="gray.200" variant="filled"
+                    bg="gray.700"
+                    _hover={{ bg: "fg" }}
+                >
                     {options?.map((option) => (
-                        <option key={option.value} value={option.value}>{option.label}</option>
+                        <option
+                            key={option.value}
+                            value={option.value}
+                            style={{ background: "#282833", color: "white" }}
+                        >
+                            {option.label}
+                        </option>
                     ))}
                 </Select>
             )}

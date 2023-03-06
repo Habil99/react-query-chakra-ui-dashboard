@@ -34,7 +34,7 @@ class CitizenService {
         return apiService.put(`citizens/${citizen.id}`, citizen);
     }
 
-    public async deleteCitizen(id: number): Promise<any> {
+    public async deleteCitizen(id: number): Promise<Citizen> {
         const response = await fetch(`https://640480fa80d9c5c7bac94116.mockapi.io/api/v1/citizens/${id}`, {
             method: 'DELETE'
         });
