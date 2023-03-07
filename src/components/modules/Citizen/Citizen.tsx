@@ -1,4 +1,4 @@
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import PageHeader from "@/components/shared/PageHeader";
 import ActionTable from "@/components/shared/ActionTable";
 import { Avatar } from "@chakra-ui/react";
@@ -108,26 +108,31 @@ const CitizenModule = () => {
                 onButtonClick={openDrawer}
             />
             <ActionTable data={data} columns={columns} isLoading={isLoading}/>
-            <CreateCitizenDrawer drawerIsOpen={drawerIsOpen} closeDrawer={closeDrawer} footer={
-                <>
-                    <Button
-                        variant="outline"
-                        color="gray.200"
-                        _hover={{ bg: "fg" }} mr={3}
-                        onClick={closeDrawer}
-                    >
-                        Cancel
-                    </Button>
-                    <Button
-                        colorScheme="blue"
-                        type="submit"
-                        form="createCitizenForm"
-                        isLoading={citizenCreating}
-                    >
-                        Save
-                    </Button>
-                </>
-            }>
+            {/*<CustomPagination total={} current={} onChange={} */}
+            <CreateCitizenDrawer
+                drawerIsOpen={drawerIsOpen}
+                closeDrawer={closeDrawer}
+                footer={
+                    <>
+                        <Button
+                            variant="outline"
+                            color="gray.200"
+                            _hover={{ bg: "fg" }} mr={3}
+                            onClick={closeDrawer}
+                        >
+                            Cancel
+                        </Button>
+                        <Button
+                            colorScheme="blue"
+                            type="submit"
+                            form="createCitizenForm"
+                            isLoading={citizenCreating}
+                        >
+                            Save
+                        </Button>
+                    </>
+                }
+            >
                 <CreateCitizenForm createCitizenFormikConfig={createCitizenFormikConfig}/>
             </CreateCitizenDrawer>
         </>

@@ -39,16 +39,16 @@ const theme = extendTheme({
     semanticTokens: {
         colors: {
             // accent semantic tokens
-            accent: { default: 'teal.500', _dark: 'teal.300' },
-            'accent-emphasis': { default: 'teal.700', _dark: 'teal.200' },
+            accent: { default: 'cyan.800', _dark: 'cyan.700' },
+            'accent-emphasis': { default: 'cyan.700', _dark: 'cyan.200' },
             'accent-static': 'teal.500',
-            'accent-muted': { default: 'teal.300', _dark: 'teal.200' },
-            'accent-subtle': { default: 'teal.50', _dark: 'teal.800' },
+            'accent-muted': { default: 'cyan.300', _dark: 'cyan.200' },
+            'accent-subtle': { default: 'cyan.50', _dark: 'cyan.800' },
             // foreground semantic tokens
             fg: { default: 'gray.700', _dark: 'gray.100' },
-            'fg-emphasis': { default: 'gray.900', _dark: 'gray.200' },
-            'fg-muted': { default: 'gray.600', _dark: 'gray.400' },
-            'fg-subtle': { default: 'gray.500', _dark: 'gray.300' },
+            'fg-emphasis': { default: 'cyan.900', _dark: 'cyan.200' },
+            'fg-muted': { default: 'cyan.600', _dark: 'cyan.400' },
+            'fg-subtle': { default: 'cyan.500', _dark: 'cyan.300' },
             'fg-on-accent': { default: 'white', _dark: 'inherit' },
         },
     },
